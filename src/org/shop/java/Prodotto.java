@@ -1,7 +1,5 @@
 package org.shop.java;
 
-import java.util.Random;
-
 public class Prodotto {
 	
 	private String code;
@@ -62,6 +60,10 @@ public class Prodotto {
 	public void setVat(int vat) {
 		if(vat > 0 && vat < 128)
 			this.vat = vat;
+	}
+	
+	public void getFullPrice() {
+		System.out.println(String.format("%.02f", (getPrice() + (getPrice() * getVat() / 100))));
 	}
 	
 	@Override

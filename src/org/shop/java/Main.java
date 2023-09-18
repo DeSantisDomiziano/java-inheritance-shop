@@ -8,5 +8,6 @@ public class Main {
 		
 		System.out.println(p1);
 		System.out.println(p2);
+		p1.getFullPrice();
 	}
 }
